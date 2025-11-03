@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class UjianUKL3 {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        
+        System.out.print("Masukkan bilangan bulat positif: ");
+        int n = scanner.nextInt();
+        
+        
+        if (n < 0) {
+            System.out.println("Error: Bilangan harus positif.");
+        } else {
+            
+            long faktorial = hitungFaktorial(n);
+            
+            System.out.println("Faktorial dari " + n + " adalah: " + faktorial);
+        }
+        
+        // Menutup scanner
+        scanner.close();
+    }
+    
+    
+    public static long hitungFaktorial(int n) {
+        long hasil = 1;
+        for (int i = 1; i <= n; i++) {
+            hasil *= i;
+        }
+        return hasil;
+    }
+}
+
+    
+
